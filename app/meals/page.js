@@ -11,9 +11,7 @@ async function Meals() {
   return <MealsGrid meals={meals} />;
 }
 
-export default async function MealsPage() {
-  const meals = await getMeals();
-
+export default function MealsPage() {
   return (
     <>
       <header className={classes.header}>
