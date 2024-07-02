@@ -2,7 +2,7 @@ import ImagePicker from "@/components/meals/image-picker";
 import classes from "./page.module.css";
 
 export default function ShareMealPage() {
-  function shareMeal(formData) {
+  async function shareMeal(formData) {
     "use server";
 
     const meal = {
@@ -13,6 +13,8 @@ export default function ShareMealPage() {
       creator: formData.get("name"),
       creator_email: formData.get("email"),
     };
+
+    console.log(meal);
   }
   return (
     <>
